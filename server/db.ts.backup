@@ -542,56 +542,6 @@ function getInitialData(): DatabaseSchema {
   };
 }
 
-function getProductionInitialData(): DatabaseSchema {
-  const seeded = getInitialData();
-
-  return {
-    ...seeded,
-
-    // Keep the required admin account, but remove demo operational data.
-    users: seeded.users.slice(0, 1),
-
-    // Production starts with no demo records.
-    events: [],
-    attendees: [],
-    photos: [],
-    albums: [],
-    announcements: [],
-    activityLogs: [],
-
-    // No demo public event cards.
-    siteEvents: [],
-
-    // No demo photo/date albums.
-    eventDateAlbums: {},
-    albumCovers: {},
-    albumYears: {},
-    albumPairs: {},
-
-    // Keep the required church/system settings.
-    settings: seeded.settings,
-
-    // Keep the existing website defaults so the public site has its
-    // required configuration/content structure.
-    websiteContent: seeded.websiteContent,
-    transactions: [],
-
-    // Public collections start empty.
-    sermons: [],
-    prayers: [],
-    members: [],
-    testimonials: [],
-    aboutImages: [],
-    ministries: [],
-    pastors: seeded.pastors ?? [],
-    songs: [],
-    aboutInfo: [],
-    verses: [],
-    giveInfo: [],
-    siteSettings: seeded.siteSettings ?? [],
-  };
-}
-
 class GFCDBManager {
   private db: DatabaseSchema;
   private dbMode: 'turso' | 'json' = 'json';
@@ -657,9 +607,9 @@ class GFCDBManager {
       this.db = this.normalize(loaded);
       console.log('[GFC DB] Data loaded');
     } else {
-      this.db = getProductionInitialData();
+      this.db = this.loadDatabase();
       await storageSave(this.db);
-      console.log('[GFC DB] Empty store - initialized with production data');
+      console.log('[GFC DB] Empty store - seeded with initial data');
     }
 
     console.log(`[GFC DB] Storage: ${this.dbMode === 'turso' ? 'Turso/libsql' : `JSON file (${DB_FILE})`}`);
