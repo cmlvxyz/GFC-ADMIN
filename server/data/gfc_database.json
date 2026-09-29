@@ -896,6 +896,26 @@
   ],
   "activityLogs": [
     {
+      "id": "log-1790655504658-qwqu",
+      "action": "Delete Date Album",
+      "entityType": "event",
+      "entityId": "Church Anniversary",
+      "details": "Deleted date album \"2nd Year Anniversary\" from event \"Church Anniversary\"",
+      "performedBy": "Admin User",
+      "role": "Admin",
+      "timestamp": "2026-09-29T04:18:24.658Z"
+    },
+    {
+      "id": "log-1790655492565-6bib",
+      "action": "Create Year Album",
+      "entityType": "event",
+      "entityId": "Church Anniversary",
+      "details": "Added year album \"2024\" to event \"Church Anniversary\"",
+      "performedBy": "Admin User",
+      "role": "Admin",
+      "timestamp": "2026-09-29T04:18:12.565Z"
+    },
+    {
       "id": "log-1790604831751-4hah",
       "action": "Create Date Album",
       "entityType": "event",
@@ -1823,9 +1843,7 @@
     "Bible Study": [
       "September 10, 2026"
     ],
-    "Church Anniversary": [
-      "2nd Year Anniversary"
-    ]
+    "Church Anniversary": []
   },
   "websiteContent": {
     "churchName": "Gospel Fellowship Church",
@@ -3516,5 +3534,11 @@
     }
   ],
   "leaders": [],
-  "albumCovers": {}
+  "albumCovers": {},
+  "albumYears": {
+    "Church Anniversary": [
+      "2024"
+    ]
+  },
+  "albumPairs": {}
 }

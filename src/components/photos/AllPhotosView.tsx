@@ -3,7 +3,7 @@ import {
   Calendar, QrCode, Image as ImageIcon, Folder, Eye, Trash2, Plus, 
   Upload, X, Check, ExternalLink, ArrowLeft 
 } from 'lucide-react';
-import { Photo, Album } from '../../types/index.ts';
+import { Photo, Album, AlbumPair } from '../../types/index.ts';
 import { api } from '../../services/api.ts';
 import { generateQRCodeDataURL } from '../../utils/qr.ts';
 import { useToast } from '../common/Toast.tsx';
@@ -18,11 +18,82 @@ interface MonthAlbum {
   photos: Photo[];
 }
 
+const ANNIVERSARY_CATEGORY = 'church anniversary';
+
+/** Albums are matched by their real name, not by casing or stray spaces. */
+const normalizeAlbum = (value: unknown): string =>
+  String(value ?? '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+
+/**
+ * A photo belongs to a Year + Event album when it carries the album name and
+ * the event was associated with a year. Everything else keeps falling back to
+ * the month it was taken in.
+ */
+const eventOfPair = (pairs: AlbumPair[], albumName: string): AlbumPair | undefined => {
+  const wanted = normalizeAlbum(albumName);
+  if (!wanted) return undefined;
+  return pairs.find(p => normalizeAlbum(p.event) === wanted);
+};
+
+const AlbumCard: React.FC<{ album: MonthAlbum; onOpen: (album: MonthAlbum) => void }> = ({
+  album,
+  onOpen,
+}) => {
+  const hasImage = !!album.coverImage;
+
+  return (
+    <div
+      onClick={() => onOpen(album)}
+      className="group relative rounded-2xl overflow-hidden aspect-4/3 border border-slate-200/90 shadow-xs hover:shadow-md transition-all cursor-pointer select-none bg-slate-200"
+    >
+      {hasImage ? (
+        <>
+          <img
+            src={album.coverImage}
+            alt={album.name}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          {/* Gradient overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+        </>
+      ) : (
+        /* "No image" Placeholder Card matching Screenshot 1 */
+        <div className="w-full h-full bg-gradient-to-br from-slate-200 via-slate-300 to-slate-400 flex items-center justify-center relative">
+          <span className="text-2xl sm:text-3xl font-bold text-slate-500/70 select-none">
+            No image
+          </span>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        </div>
+      )}
+
+      {/* Text on Card (Bottom-Left) */}
+      <div className="absolute bottom-3.5 left-3.5 right-3.5 text-white">
+        {album.month === 'Anniversary' && (
+          <p className="text-[11px] font-semibold text-white/85 drop-shadow-sm">
+            {album.year}
+          </p>
+        )}
+        <p className="font-bold text-sm sm:text-base leading-snug drop-shadow-sm">
+          {album.name}
+        </p>
+        <p className="text-xs text-white/80 mt-0.5 drop-shadow-sm">
+          {album.photoCount} {album.photoCount === 1 ? 'photo' : 'photos'}
+        </p>
+      </div>
+    </div>
+  );
+};
+
 export const AllPhotosView: React.FC = () => {
   const { showToast } = useToast();
   const [selectedMonth, setSelectedMonth] = useState<string>('All Months');
   const [selectedYear, setSelectedYear] = useState<string>('All Years');
   const [photos, setPhotos] = useState<Photo[]>([]);
+  const [albumPairs, setAlbumPairs] = useState<AlbumPair[]>([]);
+  const [albumCovers, setAlbumCovers] = useState<Record<string, Record<string, string>>>({});
   const [loading, setLoading] = useState<boolean>(true);
   const [qrDataUrl, setQrDataUrl] = useState<string>('');
 
@@ -48,8 +119,16 @@ export const AllPhotosView: React.FC = () => {
   const loadPhotos = async () => {
     setLoading(true);
     try {
-      const data = await api.getPhotos();
+      // The pair/cover reads are supporting data: a failure there must not stop
+      // the photo list from rendering.
+      const [data, pairs, covers] = await Promise.all([
+        api.getPhotos(),
+        api.getAlbumPairs().catch(() => ({} as Record<string, AlbumPair[]>)),
+        api.getAlbumCovers().catch(() => ({} as Record<string, Record<string, string>>)),
+      ]);
       setPhotos(data);
+      setAlbumPairs(Object.values(pairs).flat());
+      setAlbumCovers(covers);
     } catch (err: any) {
       showToast('error', 'Failed to load photos', err.message);
     } finally {
@@ -63,20 +142,49 @@ export const AllPhotosView: React.FC = () => {
 
   /**
    * Albums are grouped from the photos that actually exist, so the counts are
-   * always truthful and new uploads show up on their own. There are no
-   * pre-made months: a month appears once a photo falls into it, and a photo
-   * with no usable date lands in "Other".
+   * always truthful and new uploads show up on their own.
+   *
+   * A Church Anniversary photo is filed under its own Year + Event album, never
+   * under the month it happened to be uploaded in. The remaining photos fall
+   * back to the month they were taken in.
    */
-  const defaultAlbums: MonthAlbum[] = (() => {
+  const { anniversaryAlbums, defaultAlbums } = useMemo((): {
+    anniversaryAlbums: MonthAlbum[];
+    defaultAlbums: MonthAlbum[];
+  } => {
     const MONTHS = [
       'January', 'February', 'March', 'April', 'May', 'June',
       'July', 'August', 'September', 'October', 'November', 'December',
     ];
 
+    // One bucket per Year + Event, keyed by the normalized album name.
+    const anniversaryBuckets = new Map<string, MonthAlbum>();
     const buckets = new Map<string, Photo[]>();
     const keyOf = (month: string, year: string) => `${month}|${year}`;
 
     for (const photo of photos) {
+      const pair = eventOfPair(albumPairs, photo.albumName);
+
+      if (pair) {
+        const key = normalizeAlbum(pair.event);
+        const existing = anniversaryBuckets.get(key);
+        if (existing) {
+          existing.photos.push(photo);
+        } else {
+          anniversaryBuckets.set(key, {
+            id: `anniversary-${key.replace(/[^a-z0-9]+/g, '-')}`,
+            name: pair.event,
+            month: 'Anniversary',
+            year: String(pair.year),
+            photoCount: 0,
+            coverImage: albumCovers?.[ANNIVERSARY_CATEGORY]?.[pair.event],
+            photos: [],
+          });
+          anniversaryBuckets.get(key)!.photos.push(photo);
+        }
+        continue;
+      }
+
       const taken = String(photo.takenAt ?? '').trim();
       const parsed = taken ? new Date(taken) : null;
       const valid = parsed && !Number.isNaN(parsed.getTime());
@@ -97,7 +205,7 @@ export const AllPhotosView: React.FC = () => {
       return year.length === 4 ? Number(year) * 100 + m : Number.MAX_SAFE_INTEGER - 1;
     };
 
-    return Array.from(buckets.entries())
+    const monthAlbums = Array.from(buckets.entries())
       .map(([key, group]) => {
         const [month, year] = key.split('|');
         return {
@@ -111,15 +219,31 @@ export const AllPhotosView: React.FC = () => {
         };
       })
       .sort((a, b) => order(a.month, a.year) - order(b.month, b.year));
-  })();
+
+    const anniversary = Array.from(anniversaryBuckets.values())
+      .map(album => ({
+        ...album,
+        photoCount: album.photos.length,
+        coverImage: album.coverImage || album.photos[0]?.imageUrl,
+      }))
+      .sort((a, b) => Number(a.year) - Number(b.year));
+
+    return { anniversaryAlbums: anniversary, defaultAlbums: monthAlbums };
+  }, [photos, albumPairs, albumCovers]);
 
   // Filter albums by selected month and year
-  const filteredAlbums = defaultAlbums.filter((album) => {
+  const filteredAlbums = defaultAlbums.filter(album => {
     if (album.id === 'other') return true;
     const matchMonth = selectedMonth === 'All Months' || album.month.toLowerCase() === selectedMonth.toLowerCase();
     const matchYear = selectedYear === 'All Years' || album.year === selectedYear;
     return matchMonth && matchYear;
   });
+
+  // Anniversary cards carry a year but not a month, so the month filter leaves
+  // them alone and only the year filter narrows them down.
+  const filteredAnniversaryAlbums = anniversaryAlbums.filter(
+    album => selectedYear === 'All Years' || album.year === selectedYear,
+  );
 
   const monthsList = [
     'All Months',
@@ -137,38 +261,41 @@ export const AllPhotosView: React.FC = () => {
     'December',
   ];
 
-  // Years come from the photos that exist, newest first.
+  // Years come from the photos that exist, newest first. Anniversary years are
+  // included too so the year filter can reach those cards.
   const yearsList = useMemo((): string[] => {
     const years = Array.from(
       new Set(
-        defaultAlbums
+        [...defaultAlbums, ...anniversaryAlbums]
           .map(a => a.year)
           .filter(y => /^\d{4}$/.test(y)),
       ),
     ).sort((a, b) => Number(b) - Number(a));
     return ['All Years', ...years];
-  }, [defaultAlbums]);
+  }, [defaultAlbums, anniversaryAlbums]);
 
   const handleUploadPhotoToAlbum = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newPhotoTitle.trim() || !newPhotoUrl.trim() || !activeAlbum) return;
 
-      try {
-        // Use today's date so the photo files itself under the right month
-        // instead of being pinned to a hardcoded one.
-        const today = new Date();
-        const takenAt = [
-          today.getFullYear(),
-          String(today.getMonth() + 1).padStart(2, '0'),
-          String(today.getDate()).padStart(2, '0'),
-        ].join('-');
-        await api.createPhoto({
-          title: newPhotoTitle.trim(),
-          imageUrl: newPhotoUrl.trim(),
-          albumName: activeAlbum.name,
-          category: 'Sunday Worship',
-          takenAt,
-        });
+    try {
+      // An Anniversary card already knows its year, so the photo is dated inside
+      // that year. Any other card uses today's date, which files it under the
+      // month the photo was added instead of a hardcoded one.
+      const today = new Date();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      const takenAt = activeAlbum.month === 'Anniversary' && /^\d{4}$/.test(activeAlbum.year)
+        ? `${activeAlbum.year}-${mm}-${dd}`
+        : `${today.getFullYear()}-${mm}-${dd}`;
+
+      await api.createPhoto({
+        title: newPhotoTitle.trim(),
+        imageUrl: newPhotoUrl.trim(),
+        albumName: activeAlbum.name,
+        category: activeAlbum.month === 'Anniversary' ? ANNIVERSARY_CATEGORY : 'Sunday Worship',
+        takenAt,
+      });
       showToast('success', 'Photo Added', `Added photo to ${activeAlbum.name}`);
       setNewPhotoTitle('');
       setNewPhotoUrl('');
@@ -273,49 +400,23 @@ export const AllPhotosView: React.FC = () => {
             </div>
           </div>
 
+          {/* Church Anniversary albums, one card per Year + Event */}
+          {filteredAnniversaryAlbums.length > 0 && (
+            <div className="space-y-3">
+              <h2 className="text-sm font-bold text-slate-900">Church Anniversary</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                {filteredAnniversaryAlbums.map(album => (
+                  <AlbumCard key={album.id} album={album} onOpen={setActiveAlbum} />
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Grid of Album Cards matching Screenshot 1 */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-            {filteredAlbums.map((album) => {
-              const hasImage = !!album.coverImage;
-
-              return (
-                <div
-                  key={album.id}
-                  onClick={() => setActiveAlbum(album)}
-                  className="group relative rounded-2xl overflow-hidden aspect-4/3 border border-slate-200/90 shadow-xs hover:shadow-md transition-all cursor-pointer select-none bg-slate-200"
-                >
-                  {hasImage ? (
-                    <>
-                      <img
-                        src={album.coverImage}
-                        alt={album.name}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                      {/* Gradient overlay for text readability */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                    </>
-                  ) : (
-                    /* "No image" Placeholder Card matching Screenshot 1 */
-                    <div className="w-full h-full bg-gradient-to-br from-slate-200 via-slate-300 to-slate-400 flex items-center justify-center relative">
-                      <span className="text-2xl sm:text-3xl font-bold text-slate-500/70 select-none">
-                        No image
-                      </span>
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    </div>
-                  )}
-
-                  {/* Text on Card (Bottom-Left) */}
-                  <div className="absolute bottom-3.5 left-3.5 right-3.5 text-white">
-                    <p className="font-bold text-sm sm:text-base leading-snug drop-shadow-sm">
-                      {album.name}
-                    </p>
-                    <p className="text-xs text-white/80 mt-0.5 drop-shadow-sm">
-                      {album.photoCount} photos
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+            {filteredAlbums.map(album => (
+              <AlbumCard key={album.id} album={album} onOpen={setActiveAlbum} />
+            ))}
           </div>
         </div>
 
