@@ -1,0 +1,2049 @@
+{
+  "users": [
+    {
+      "id": "usr-1",
+      "name": "Pastor Edrian Clavel",
+      "email": "admin@gfc.org",
+      "role": "Super Admin",
+      "phone": "+63 917 888 1234",
+      "ministry": "Pastoral & Executive",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+      "status": "active",
+      "lastLogin": "2026-09-28T12:27:09.218Z",
+      "createdAt": "2026-01-01T08:00:00Z"
+    },
+    {
+      "id": "usr-2",
+      "name": "Sister Mary Grace Santos",
+      "email": "grace@gfc.org",
+      "role": "Admin",
+      "phone": "+63 918 555 9876",
+      "ministry": "Administration & Finance",
+      "avatarUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
+      "status": "active",
+      "lastLogin": "2026-09-28T12:27:09.218Z",
+      "createdAt": "2026-01-15T09:30:00Z"
+    },
+    {
+      "id": "usr-3",
+      "name": "Brother Joshua Ramos",
+      "email": "media@gfc.org",
+      "role": "Media Team",
+      "phone": "+63 920 333 4455",
+      "ministry": "Creative Media & Tech",
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
+      "status": "active",
+      "lastLogin": "2026-09-28T12:27:09.218Z",
+      "createdAt": "2026-02-01T10:00:00Z"
+    },
+    {
+      "id": "usr-4",
+      "name": "Deacon Roberto Mendoza",
+      "email": "pastor@gfc.org",
+      "role": "Pastor",
+      "phone": "+63 919 777 2211",
+      "ministry": "Pastoral Care & Outreach",
+      "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
+      "status": "active",
+      "lastLogin": "2026-09-28T12:27:09.218Z",
+      "createdAt": "2026-02-10T11:00:00Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "evt-101",
+      "title": "GFC Sunday Grand Worship & Communion",
+      "description": "Join the entire Gospel Fellowship Church family for powerful worship, Holy Communion, and an inspiring message of hope from God’s Word.",
+      "category": "Sunday Service",
+      "date": "2026-10-04",
+      "time": "09:00 AM - 11:30 AM",
+      "location": "GFC Main Sanctuary & Fellowship Hall",
+      "bannerUrl": "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=1200&q=80",
+      "capacity": 350,
+      "registeredCount": 142,
+      "checkInsCount": 88,
+      "status": "published",
+      "qrCodeValue": "GFC:EVENT:evt-101:SEC-90812",
+      "qrTicketSecret": "SEC-90812",
+      "createdAt": "2026-09-01T08:00:00Z",
+      "updatedAt": "2026-09-25T10:00:00Z"
+    },
+    {
+      "id": "evt-102",
+      "title": "GFC Youth Ignite Summit 2026",
+      "description": "A dedicated gathering for high school and university students featuring dynamic live worship, breakout sessions, games, and leadership workshops.",
+      "category": "Youth Ministry",
+      "date": "2026-10-10",
+      "time": "01:00 PM - 06:00 PM",
+      "location": "GFC Activity Center, 2nd Floor",
+      "bannerUrl": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80",
+      "capacity": 180,
+      "registeredCount": 95,
+      "checkInsCount": 0,
+      "status": "published",
+      "qrCodeValue": "GFC:EVENT:evt-102:SEC-41723",
+      "qrTicketSecret": "SEC-41723",
+      "createdAt": "2026-09-05T08:00:00Z",
+      "updatedAt": "2026-09-20T12:00:00Z"
+    },
+    {
+      "id": "evt-103",
+      "title": "Night of Praise & Intercessory Prayer",
+      "description": "An evening set apart for heartfelt unhurried praise, intercession for our nation, healing prayers, and community fellowship.",
+      "category": "Worship Night",
+      "date": "2026-10-16",
+      "time": "06:30 PM - 09:00 PM",
+      "location": "GFC Worship Center",
+      "bannerUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80",
+      "capacity": 250,
+      "registeredCount": 68,
+      "checkInsCount": 0,
+      "status": "published",
+      "qrCodeValue": "GFC:EVENT:evt-103:SEC-77391",
+      "qrTicketSecret": "SEC-77391",
+      "createdAt": "2026-09-10T08:00:00Z",
+      "updatedAt": "2026-09-22T14:00:00Z"
+    },
+    {
+      "id": "evt-104",
+      "title": "GFC Barangay Limay Community Outreach & Feeding",
+      "description": "Serving over 300 children and families with hot meals, school supplies, free medical check-ups, and the love of Christ.",
+      "category": "Outreach & Missions",
+      "date": "2026-10-24",
+      "time": "08:00 AM - 01:00 PM",
+      "location": "Barangay SF II Limay Covered Court",
+      "bannerUrl": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80",
+      "capacity": 300,
+      "registeredCount": 110,
+      "checkInsCount": 0,
+      "status": "published",
+      "qrCodeValue": "GFC:EVENT:evt-104:SEC-52904",
+      "qrTicketSecret": "SEC-52904",
+      "createdAt": "2026-09-12T08:00:00Z",
+      "updatedAt": "2026-09-24T16:00:00Z"
+    },
+    {
+      "id": "evt-105",
+      "title": "Discipleship Leadership Retreat & Planning",
+      "description": "Quarterly strategic leadership alignment for cell leaders, ministry heads, and pastoral staff.",
+      "category": "Special Event",
+      "date": "2026-11-07",
+      "time": "08:00 AM - 05:00 PM",
+      "location": "Bataan Highland Retreat Camp",
+      "bannerUrl": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1200&q=80",
+      "capacity": 60,
+      "registeredCount": 22,
+      "checkInsCount": 0,
+      "status": "draft",
+      "qrCodeValue": "GFC:EVENT:evt-105:SEC-11849",
+      "qrTicketSecret": "SEC-11849",
+      "createdAt": "2026-09-18T08:00:00Z",
+      "updatedAt": "2026-09-18T08:00:00Z"
+    }
+  ],
+  "attendees": [
+    {
+      "id": "att-1",
+      "eventId": "evt-101",
+      "eventTitle": "GFC Sunday Grand Worship & Communion",
+      "attendeeName": "Manuel D. Cruz",
+      "attendeeEmail": "manuel.cruz@gmail.com",
+      "attendeePhone": "+63 917 111 2222",
+      "ticketCode": "GFC-EVT101-78912",
+      "qrData": "{\"type\":\"gfc_event_ticket\",\"eventId\":\"evt-101\",\"ticketCode\":\"GFC-EVT101-78912\",\"name\":\"Manuel D. Cruz\",\"secret\":\"SEC-90812\"}",
+      "status": "checked_in",
+      "checkedInAt": "2026-09-27T08:45:00Z",
+      "registeredAt": "2026-09-20T10:00:00Z"
+    },
+    {
+      "id": "att-2",
+      "eventId": "evt-101",
+      "eventTitle": "GFC Sunday Grand Worship & Communion",
+      "attendeeName": "Clarissa Bautista",
+      "attendeeEmail": "clarissa.b@yahoo.com",
+      "attendeePhone": "+63 920 444 8899",
+      "ticketCode": "GFC-EVT101-44120",
+      "qrData": "{\"type\":\"gfc_event_ticket\",\"eventId\":\"evt-101\",\"ticketCode\":\"GFC-EVT101-44120\",\"name\":\"Clarissa Bautista\",\"secret\":\"SEC-90812\"}",
+      "status": "checked_in",
+      "checkedInAt": "2026-09-27T08:52:10Z",
+      "registeredAt": "2026-09-21T11:20:00Z"
+    },
+    {
+      "id": "att-3",
+      "eventId": "evt-101",
+      "eventTitle": "GFC Sunday Grand Worship & Communion",
+      "attendeeName": "Rafael Santiago",
+      "attendeeEmail": "rafael.santi@gmail.com",
+      "attendeePhone": "+63 918 333 5566",
+      "ticketCode": "GFC-EVT101-99231",
+      "qrData": "{\"type\":\"gfc_event_ticket\",\"eventId\":\"evt-101\",\"ticketCode\":\"GFC-EVT101-99231\",\"name\":\"Rafael Santiago\",\"secret\":\"SEC-90812\"}",
+      "status": "confirmed",
+      "checkedInAt": null,
+      "registeredAt": "2026-09-22T14:15:00Z"
+    },
+    {
+      "id": "att-4",
+      "eventId": "evt-102",
+      "eventTitle": "GFC Youth Ignite Summit 2026",
+      "attendeeName": "Bea Angela Torres",
+      "attendeeEmail": "bea.torres@outlook.com",
+      "attendeePhone": "+63 995 888 7766",
+      "ticketCode": "GFC-EVT102-12093",
+      "qrData": "{\"type\":\"gfc_event_ticket\",\"eventId\":\"evt-102\",\"ticketCode\":\"GFC-EVT102-12093\",\"name\":\"Bea Angela Torres\",\"secret\":\"SEC-41723\"}",
+      "status": "confirmed",
+      "checkedInAt": null,
+      "registeredAt": "2026-09-23T15:30:00Z"
+    },
+    {
+      "id": "att-5",
+      "eventId": "evt-104",
+      "eventTitle": "GFC Barangay Limay Community Outreach & Feeding",
+      "attendeeName": "Leandro P. Castillo",
+      "attendeeEmail": "leandro.castillo@apcas.edu.ph",
+      "attendeePhone": "+63 922 654 3210",
+      "ticketCode": "GFC-EVT104-33819",
+      "qrData": "{\"type\":\"gfc_event_ticket\",\"eventId\":\"evt-104\",\"ticketCode\":\"GFC-EVT104-33819\",\"name\":\"Leandro P. Castillo\",\"secret\":\"SEC-52904\"}",
+      "status": "confirmed",
+      "checkedInAt": null,
+      "registeredAt": "2026-09-24T09:00:00Z"
+    }
+  ],
+  "photos": [],
+  "albums": [
+    {
+      "id": "alb-1",
+      "title": "Sunday Worship Services 2026",
+      "description": "Photos and memorable moments from our weekly Sunday family celebrations and worship services.",
+      "coverUrl": "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=800&q=80",
+      "photoCount": 4,
+      "eventId": "evt-101",
+      "qrAlbumUrl": "https://gfc.org/gallery/albums/alb-1",
+      "qrCodeValue": "GFC:ALBUM:alb-1:Worship2026",
+      "createdAt": "2026-01-05T08:00:00Z"
+    },
+    {
+      "id": "alb-2",
+      "title": "GFC Youth Ministry & Camp",
+      "description": "Vibrant youth fellowship, discipleship campfires, acoustic worship, and games.",
+      "coverUrl": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80",
+      "photoCount": 3,
+      "eventId": "evt-102",
+      "qrAlbumUrl": "https://gfc.org/gallery/albums/alb-2",
+      "qrCodeValue": "GFC:ALBUM:alb-2:YouthIgnite",
+      "createdAt": "2026-02-12T08:00:00Z"
+    },
+    {
+      "id": "alb-3",
+      "title": "Community Outreach & Missions",
+      "description": "Reaching out to Limay and surrounding barangays through feeding, relief, and medical programs.",
+      "coverUrl": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80",
+      "photoCount": 3,
+      "eventId": "evt-104",
+      "qrAlbumUrl": "https://gfc.org/gallery/albums/alb-3",
+      "qrCodeValue": "GFC:ALBUM:alb-3:MissionsLimay",
+      "createdAt": "2026-03-01T08:00:00Z"
+    },
+    {
+      "id": "alb-4",
+      "title": "Water Baptism & New Believers",
+      "description": "Celebrating public declarations of faith and new beginnings in Jesus Christ.",
+      "coverUrl": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80",
+      "photoCount": 2,
+      "eventId": null,
+      "qrAlbumUrl": "https://gfc.org/gallery/albums/alb-4",
+      "qrCodeValue": "GFC:ALBUM:alb-4:Baptism2026",
+      "createdAt": "2026-04-10T08:00:00Z"
+    }
+  ],
+  "announcements": [
+    {
+      "id": "ann-1",
+      "title": "Sunday Worship Service Schedule Adjustment",
+      "content": "Starting October 2026, our Sunday Morning Celebration begins promptly at 9:00 AM. Please arrive 15 minutes early for prayer and QR check-in.",
+      "category": "Schedule",
+      "priority": "important",
+      "author": "Pastor Edrian Clavel",
+      "publishedAt": "2026-09-22T08:00:00Z",
+      "isActive": true
+    },
+    {
+      "id": "ann-2",
+      "title": "Volunteer Call: Media Team & QR Entrance Greeters",
+      "content": "We invite members passionate about photography, video livestream, sound, and QR welcome check-ins to attend our brief workshop this Saturday.",
+      "category": "Ministry",
+      "priority": "normal",
+      "author": "Brother Joshua Ramos",
+      "publishedAt": "2026-09-24T10:00:00Z",
+      "isActive": true
+    },
+    {
+      "id": "ann-3",
+      "title": "Community Relief Drive for Coastal Families",
+      "content": "Accepting canned goods, bottled drinking water, and clean clothes for distribution at the upcoming Limay Outreach.",
+      "category": "Urgent",
+      "priority": "urgent",
+      "author": "Sister Mary Grace Santos",
+      "publishedAt": "2026-09-26T09:30:00Z",
+      "isActive": true
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": "log-1",
+      "action": "Create Event",
+      "entityType": "event",
+      "entityId": "evt-101",
+      "details": "Created \"GFC Sunday Grand Worship & Communion\" and generated event QR code & ticket secrets.",
+      "performedBy": "Pastor Edrian Clavel",
+      "role": "Super Admin",
+      "timestamp": "2026-09-01T08:00:00Z"
+    },
+    {
+      "id": "log-2",
+      "action": "Upload Photo",
+      "entityType": "photo",
+      "entityId": "pho-1",
+      "details": "Uploaded photo \"Worship Team in Spirit and in Truth\" to album \"Sunday Worship Services 2026\".",
+      "performedBy": "Brother Joshua Ramos",
+      "role": "Media Team",
+      "timestamp": "2026-09-20T11:00:00Z"
+    },
+    {
+      "id": "log-3",
+      "action": "QR Check-in Scanned",
+      "entityType": "qr_checkin",
+      "entityId": "att-1",
+      "details": "Validated QR Ticket for attendee Manuel D. Cruz at entrance scanner.",
+      "performedBy": "Sister Mary Grace Santos",
+      "role": "Admin",
+      "timestamp": "2026-09-27T08:45:00Z"
+    },
+    {
+      "id": "log-4",
+      "action": "QR Check-in Scanned",
+      "entityType": "qr_checkin",
+      "entityId": "att-2",
+      "details": "Validated QR Ticket for attendee Clarissa Bautista at entrance scanner.",
+      "performedBy": "Sister Mary Grace Santos",
+      "role": "Admin",
+      "timestamp": "2026-09-27T08:52:10Z"
+    }
+  ],
+  "settings": {
+    "churchName": "Gospel Fellowship Church",
+    "abbreviation": "GFC",
+    "tagline": "Rooted in Faith, Growing in Fellowship, Reaching in Love",
+    "address": "GFC Worship Center, Limay, Bataan, Philippines",
+    "contactEmail": "contact@gfc-fellowship.org",
+    "contactPhone": "+63 917 123 4567",
+    "websiteUrl": "https://gfc-fellowship.org",
+    "qrCheckInEnabled": true,
+    "qrPhotoSharingEnabled": true,
+    "allowPublicPhotoUpload": true,
+    "requireAdminApprovalForPhotos": false,
+    "defaultEventCapacity": 250
+  },
+  "eventDateAlbums": {
+    "SUNDAY SERVICE": [
+      "June 14, 2026",
+      "August 18, 2026",
+      "September 20, 2026",
+      "October 04, 2026"
+    ],
+    "YOUTH FELLOWSHIP": [
+      "June 20, 2026",
+      "July 15, 2026",
+      "August 28, 2026",
+      "October 10, 2026"
+    ],
+    "MIDWEEK SERVICE": [
+      "June 17, 2026",
+      "July 22, 2026",
+      "August 19, 2026"
+    ],
+    "COMMUNITY OUTREACH": [
+      "August 15, 2026",
+      "October 24, 2026"
+    ],
+    "SPECIAL EVENT": [
+      "November 07, 2026"
+    ]
+  },
+  "websiteContent": {
+    "churchName": "Gospel Fellowship Church",
+    "tagline": "Tithes & Offering Ledger",
+    "subTagline": "Rooted in Faith, Growing in Fellowship, Reaching in Love",
+    "logoUrl": "/gfc-logo.png",
+    "bannerVerse": "“Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.”",
+    "bannerVerseRef": "2 Corinthians 9:7 (NIV)",
+    "heroHeadline": "Worship, Community & Fellowship in Christ",
+    "heroDescription": "Join Gospel Fellowship Church for inspirational Sunday services, youth gatherings, community outreach, and heartfelt fellowship in Limay, Bataan.",
+    "heroBadge": "Welcome to Our Church Family",
+    "heroImageUrl": "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=1600&q=80",
+    "ctaButtonText": "Browse Church Events",
+    "ctaSecondaryText": "View Fellowship Photos",
+    "aboutTitle": "About Gospel Fellowship Church",
+    "aboutDescription": "Gospel Fellowship Church is a Bible-believing, Christ-exalting fellowship in Limay, Bataan. We exist to declare the glorious gospel of Jesus Christ, disciple believers into spiritual maturity, and serve our local community with genuine Christian love and compassion.",
+    "mission": "To preach the Word of God faithfully, cultivate a loving fellowship of believers, and make devoted disciples of Jesus Christ who impact the nation.",
+    "vision": "A thriving, Spirit-filled church of passionate worshipers and servant leaders, transforming families and communities across Bataan and beyond.",
+    "pastorWelcomeTitle": "A Message from Pastor Edrian Clavel",
+    "pastorWelcomeMessage": "Welcome to Gospel Fellowship Church! Whether you are seeking spiritual answers, looking for a church family, or desiring deeper discipleship, you are always welcome here.",
+    "pastorName": "Pastor Edrian Clavel",
+    "pastorRole": "Senior Pastor",
+    "pastorImageUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+    "givingTitle": "Tithes, Offerings & Stewardship",
+    "givingDescription": "We worship God through faithful stewardship. Your tithes and generous love gifts support our Sunday ministries, church facilities, feeding programs, and missionary outreach.",
+    "givingVerse": "“Bring the whole tithe into the storehouse, that there may be food in my house.”",
+    "givingVerseRef": "Malachi 3:10",
+    "bankAccountDetails": "BDO Unibank - Gospel Fellowship Church\nAccount No: 0072-1082-9912",
+    "gcashDetails": "GCash: 0917-888-1234 (Edrian C.)",
+    "serviceTimes": [
+      {
+        "name": "Sunday Grand Worship",
+        "dayTime": "Sundays 9:00 AM - 11:30 AM",
+        "description": "Main Worship Sanctuary with Praise & Communion"
+      },
+      {
+        "name": "Midweek Prayer & Bible Study",
+        "dayTime": "Wednesdays 7:00 PM - 8:30 PM",
+        "description": "Expository Scripture Teaching & Intercession"
+      },
+      {
+        "name": "Youth Alive Fellowship",
+        "dayTime": "Saturdays 4:00 PM - 6:00 PM",
+        "description": "Dynamic Youth Ministry, Mentorship & Fun"
+      }
+    ],
+    "contactAddress": "GFC Worship Center, Limay, Bataan, Philippines",
+    "contactEmail": "contact@gfc-fellowship.org",
+    "contactPhone": "+63 917 123 4567",
+    "facebookUrl": "https://facebook.com/GospelFellowshipChurchLimay"
+  },
+  "transactions": [
+    {
+      "id": 1,
+      "date": "2025-01-05",
+      "pasok": 2135,
+      "labas": 700,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 1435,
+      "createdAt": "2026-08-30 03:29:44"
+    },
+    {
+      "id": 2,
+      "date": "2025-01-12",
+      "pasok": 2630,
+      "labas": 1300,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 2765,
+      "createdAt": "2026-08-30 03:31:15"
+    },
+    {
+      "id": 3,
+      "date": "2025-01-19",
+      "pasok": 1710,
+      "labas": 470,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 4005,
+      "createdAt": "2026-08-30 03:31:56"
+    },
+    {
+      "id": 4,
+      "date": "2025-01-26",
+      "pasok": 1816,
+      "labas": 3700,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 2121,
+      "createdAt": "2026-08-30 03:32:13"
+    },
+    {
+      "id": 5,
+      "date": "2025-02-02",
+      "pasok": 2539,
+      "labas": 747,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 3913,
+      "createdAt": "2026-08-30 03:33:23"
+    },
+    {
+      "id": 6,
+      "date": "2025-02-09",
+      "pasok": 1440,
+      "labas": 465,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 4888,
+      "createdAt": "2026-08-30 03:38:30"
+    },
+    {
+      "id": 7,
+      "date": "2025-02-16",
+      "pasok": 1336,
+      "labas": 1100,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 5124,
+      "createdAt": "2026-08-30 03:34:11"
+    },
+    {
+      "id": 8,
+      "date": "2025-02-23",
+      "pasok": 2245,
+      "labas": 4000,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 3369,
+      "createdAt": "2026-08-30 03:34:33"
+    },
+    {
+      "id": 9,
+      "date": "2025-03-02",
+      "pasok": 2014,
+      "labas": 500,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 4883,
+      "createdAt": "2026-08-30 03:35:20"
+    },
+    {
+      "id": 10,
+      "date": "2025-03-09",
+      "pasok": 3012,
+      "labas": 1040,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 6855,
+      "createdAt": "2026-08-30 03:37:18"
+    },
+    {
+      "id": 11,
+      "date": "2025-03-16",
+      "pasok": 2412,
+      "labas": 1040,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 8227,
+      "createdAt": "2026-08-30 03:36:55"
+    },
+    {
+      "id": 12,
+      "date": "2025-03-23",
+      "pasok": 2251,
+      "labas": 1000,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 9478,
+      "createdAt": "2026-08-30 03:38:49"
+    },
+    {
+      "id": 13,
+      "date": "2025-03-30",
+      "pasok": 2710,
+      "labas": 4000,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 8188,
+      "createdAt": "2026-08-30 03:39:02"
+    },
+    {
+      "id": 14,
+      "date": "2025-04-06",
+      "pasok": 2197,
+      "labas": 656,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 9729,
+      "createdAt": "2026-08-30 03:39:27"
+    },
+    {
+      "id": 15,
+      "date": "2025-04-13",
+      "pasok": 1579,
+      "labas": 1040,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 10268,
+      "createdAt": "2026-08-30 03:40:46"
+    },
+    {
+      "id": 16,
+      "date": "2025-04-20",
+      "pasok": 3160,
+      "labas": 3090,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 10338,
+      "createdAt": "2026-08-30 03:41:03"
+    },
+    {
+      "id": 17,
+      "date": "2025-04-27",
+      "pasok": 3617,
+      "labas": 1500,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 12455,
+      "createdAt": "2026-08-30 03:41:24"
+    },
+    {
+      "id": 18,
+      "date": "2025-05-04",
+      "pasok": 1552,
+      "labas": 600,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 13407,
+      "createdAt": "2026-08-30 03:45:20"
+    },
+    {
+      "id": 19,
+      "date": "2025-05-11",
+      "pasok": 4533,
+      "labas": 200,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 17740,
+      "createdAt": "2026-08-30 03:45:31"
+    },
+    {
+      "id": 20,
+      "date": "2025-05-18",
+      "pasok": 3903,
+      "labas": 1200,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 20443,
+      "createdAt": "2026-08-30 03:45:55"
+    },
+    {
+      "id": 21,
+      "date": "2025-05-25",
+      "pasok": 2259,
+      "labas": 4400,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 18302,
+      "createdAt": "2026-08-30 03:46:18"
+    },
+    {
+      "id": 22,
+      "date": "2025-06-01",
+      "pasok": 3230,
+      "labas": 500,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 21032,
+      "createdAt": "2026-08-30 03:46:37"
+    },
+    {
+      "id": 23,
+      "date": "2025-06-08",
+      "pasok": 1760,
+      "labas": 500,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 22292,
+      "createdAt": "2026-08-30 03:46:46"
+    },
+    {
+      "id": 24,
+      "date": "2025-06-15",
+      "pasok": 2792,
+      "labas": 1830,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 23254,
+      "createdAt": "2026-08-30 03:47:02"
+    },
+    {
+      "id": 25,
+      "date": "2025-06-22",
+      "pasok": 2100,
+      "labas": 400,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 24954,
+      "createdAt": "2026-08-30 03:47:14"
+    },
+    {
+      "id": 26,
+      "date": "2025-06-29",
+      "pasok": 2714,
+      "labas": 1080,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 26588,
+      "createdAt": "2026-08-30 03:47:40"
+    },
+    {
+      "id": 27,
+      "date": "2025-07-06",
+      "pasok": 2858,
+      "labas": 850,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 28596,
+      "createdAt": "2026-08-30 03:47:54"
+    },
+    {
+      "id": 28,
+      "date": "2025-07-13",
+      "pasok": 2105,
+      "labas": 0,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 30701,
+      "createdAt": "2026-08-30 03:48:08"
+    },
+    {
+      "id": 29,
+      "date": "2025-07-20",
+      "pasok": 2154,
+      "labas": 820,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 32035,
+      "createdAt": "2026-08-30 03:48:25"
+    },
+    {
+      "id": 30,
+      "date": "2025-07-27",
+      "pasok": 2205,
+      "labas": 3500,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 30740,
+      "createdAt": "2026-08-30 03:48:40"
+    },
+    {
+      "id": 31,
+      "date": "2025-08-03",
+      "pasok": 1648,
+      "labas": 0,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 32388,
+      "createdAt": "2026-08-30 03:49:11"
+    },
+    {
+      "id": 32,
+      "date": "2025-08-10",
+      "pasok": 1152,
+      "labas": 0,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 33540,
+      "createdAt": "2026-08-30 03:49:20"
+    },
+    {
+      "id": 33,
+      "date": "2025-08-17",
+      "pasok": 1487,
+      "labas": 900,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 34127,
+      "createdAt": "2026-08-30 03:49:39"
+    },
+    {
+      "id": 34,
+      "date": "2025-08-24",
+      "pasok": 321,
+      "labas": 300,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 34148,
+      "createdAt": "2026-08-30 03:49:52"
+    },
+    {
+      "id": 35,
+      "date": "2025-08-31",
+      "pasok": 1537,
+      "labas": 3700,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 31985,
+      "createdAt": "2026-08-30 03:50:12"
+    },
+    {
+      "id": 36,
+      "date": "2025-09-07",
+      "pasok": 1317,
+      "labas": 0,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 33302,
+      "createdAt": "2026-08-30 03:50:35"
+    },
+    {
+      "id": 37,
+      "date": "2025-09-14",
+      "pasok": 700,
+      "labas": 0,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 34002,
+      "createdAt": "2026-08-30 03:50:43"
+    },
+    {
+      "id": 38,
+      "date": "2025-09-21",
+      "pasok": 962,
+      "labas": 300,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 34664,
+      "createdAt": "2026-08-30 03:50:54"
+    },
+    {
+      "id": 39,
+      "date": "2025-09-28",
+      "pasok": 1,
+      "labas": 0,
+      "purpose": "Anniversary",
+      "forPastor": false,
+      "balance": 34665,
+      "createdAt": "2026-08-30 03:51:35"
+    },
+    {
+      "id": 40,
+      "date": "2025-10-05",
+      "pasok": 1150,
+      "labas": 0,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 35815,
+      "createdAt": "2026-08-30 03:51:52"
+    },
+    {
+      "id": 41,
+      "date": "2025-10-12",
+      "pasok": 1956,
+      "labas": 0,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 37771,
+      "createdAt": "2026-08-30 03:52:02"
+    },
+    {
+      "id": 42,
+      "date": "2025-10-19",
+      "pasok": 1712,
+      "labas": 300,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 39183,
+      "createdAt": "2026-08-30 03:52:12"
+    },
+    {
+      "id": 43,
+      "date": "2025-10-26",
+      "pasok": 2031,
+      "labas": 3700,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 37514,
+      "createdAt": "2026-08-30 03:52:37"
+    },
+    {
+      "id": 44,
+      "date": "2025-11-02",
+      "pasok": 1913,
+      "labas": 0,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 39427,
+      "createdAt": "2026-08-30 03:53:23"
+    },
+    {
+      "id": 45,
+      "date": "2025-11-09",
+      "pasok": 1751,
+      "labas": 0,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 41178,
+      "createdAt": "2026-08-30 03:57:36"
+    },
+    {
+      "id": 46,
+      "date": "2025-11-16",
+      "pasok": 1692,
+      "labas": 0,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 42870,
+      "createdAt": "2026-08-30 03:57:57"
+    },
+    {
+      "id": 47,
+      "date": "2025-11-23",
+      "pasok": 1204,
+      "labas": 960,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 43114,
+      "createdAt": "2026-08-30 03:58:25"
+    },
+    {
+      "id": 48,
+      "date": "2025-11-29",
+      "pasok": 1891,
+      "labas": 6330,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 38675,
+      "createdAt": "2026-08-30 04:00:48"
+    },
+    {
+      "id": 49,
+      "date": "2025-12-07",
+      "pasok": 1086,
+      "labas": 86,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 39675,
+      "createdAt": "2026-08-30 04:03:04"
+    },
+    {
+      "id": 50,
+      "date": "2025-12-14",
+      "pasok": 3319,
+      "labas": 3500,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 39494,
+      "createdAt": "2026-08-30 04:03:36"
+    },
+    {
+      "id": 51,
+      "date": "2025-12-21",
+      "pasok": 3309,
+      "labas": 120,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 42683,
+      "createdAt": "2026-08-30 04:03:58"
+    },
+    {
+      "id": 52,
+      "date": "2025-12-28",
+      "pasok": 1930,
+      "labas": 3800,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 40813,
+      "createdAt": "2026-08-30 04:04:38"
+    },
+    {
+      "id": 53,
+      "date": "2026-08-30",
+      "pasok": 500,
+      "labas": 0,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 41313,
+      "createdAt": "2026-08-30 12:21:59"
+    },
+    {
+      "id": 54,
+      "date": "2027-08-30",
+      "pasok": 5000,
+      "labas": 0,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 46313,
+      "createdAt": "2026-08-30 12:22:52"
+    },
+    {
+      "id": 55,
+      "date": "2028-08-30",
+      "pasok": 10000,
+      "labas": 0,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 56313,
+      "createdAt": "2026-08-30 12:23:13"
+    },
+    {
+      "id": 56,
+      "date": "2029-08-30",
+      "pasok": 10000,
+      "labas": 0,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 66313,
+      "createdAt": "2026-08-30 12:23:44"
+    },
+    {
+      "id": 57,
+      "date": "2030-08-30",
+      "pasok": 10000,
+      "labas": 0,
+      "purpose": "",
+      "forPastor": false,
+      "balance": 76313,
+      "createdAt": "2026-08-30 12:24:06"
+    }
+  ],
+  "siteEvents": [
+    {
+      "id": "anniversary",
+      "title": "Church Anniversary",
+      "date": "Every 2nd Sunday of the month",
+      "tag": "🎉 Celebration",
+      "description": "Special thanksgiving gathering celebrating God's faithfulness and guidance in our church history.",
+      "location": "📍 Gospel Fellowship Church Main Sanctuary",
+      "defaultVerse": "I will bless the Lord at all times; His praise shall continually be in my mouth.",
+      "defaultVerseRef": "Psalm 34:1",
+      "image": "/image-circle.png",
+      "dateEntries": []
+    },
+    {
+      "id": "prayer",
+      "title": "Prayer Meeting",
+      "date": "Every Monday • 7:00 PM",
+      "tag": "🙏 Prayer",
+      "description": "Come together as a community to pray for our church, our nation, and one another.",
+      "location": "📍 Gospel Fellowship Church Sanctuary",
+      "defaultVerse": "Pray without ceasing.",
+      "defaultVerseRef": "Jeremiah 29:13",
+      "image": "/Prayer Meeting/prayer-meeting.jpg",
+      "dateEntries": []
+    },
+    {
+      "id": "biblestudy",
+      "title": "Bible Study",
+      "date": "Every Wednesday • 7:00 PM",
+      "tag": "📖 Word",
+      "description": "Interactive mid-week study diving deep into the scriptures and practical Christian living.",
+      "location": "📍 Gospel Fellowship Church",
+      "defaultVerse": "Your word is a lamp to my feet and a light to my path.",
+      "defaultVerseRef": "Psalm 119:105",
+      "image": "/Bible Study/bible-study.jpg",
+      "dateEntries": []
+    },
+    {
+      "id": "worship",
+      "title": "Worship Night",
+      "date": "Every Friday • 7:00 PM",
+      "tag": "🎵 Music",
+      "description": "A dedicated evening of intimate praise, prayer, and acoustic worship.",
+      "location": "📍 Gospel Fellowship Church Sanctuary",
+      "defaultVerse": "Sing to the Lord a new song; sing to the Lord, all the earth.",
+      "defaultVerseRef": "Psalm 96:1",
+      "image": "/Worship Night/worship-night.jpg",
+      "dateEntries": []
+    },
+    {
+      "id": "sunday",
+      "title": "Sunday Service",
+      "date": "Every Sunday • 8:30 AM",
+      "tag": "⛪ Worship",
+      "description": "Our main weekly worship service. Join us for joyful praise, passionate prayer, and the faithful preaching of God's Word.",
+      "location": "📍 Gospel Fellowship Church, Limay, Bataan",
+      "defaultVerse": "I was glad when they said to me, \"Let us go into the house of the Lord.\"",
+      "defaultVerseRef": "Psalm 122:1",
+      "image": "/Sunday Service/sunday-service.jpg",
+      "dateEntries": []
+    },
+    {
+      "id": "youth",
+      "title": "Next Generation Youth",
+      "date": "Every Sunday • 7:00 PM",
+      "tag": "🌟 Youth",
+      "description": "Fellowship, games, worship, and Bible discussions tailored specifically for students and young adults.",
+      "location": "📍 Gospel Fellowship Church Youth Hall",
+      "defaultVerse": "Let no one despise your youth, but set the believers an example.",
+      "defaultVerseRef": "1 Timothy 4:12",
+      "image": "/Next Gen/next-gen.jpg",
+      "dateEntries": []
+    },
+    {
+      "id": "gospel-network",
+      "title": "Gospel Network",
+      "date": "",
+      "tag": "OBEDIENCE",
+      "description": "Your willingness to obey and Love others",
+      "location": "",
+      "defaultVerse": "",
+      "defaultVerseRef": "",
+      "image": "/image-circle.png",
+      "dateEntries": []
+    }
+  ],
+  "sermons": [],
+  "prayers": [],
+  "members": [],
+  "testimonials": [],
+  "aboutImages": [],
+  "ministries": [],
+  "pastors": [
+    {
+      "id": "1",
+      "name": "Zaldy Bernaldo",
+      "role": "Pastor",
+      "facebook": "https://www.facebook.com/zaldy.bernaldo.2025",
+      "image": "Prayer Meeting/July21/july21-10.png"
+    },
+    {
+      "id": "2",
+      "name": "Oliver Ricarpo",
+      "role": "Associate Pastor",
+      "facebook": "https://www.facebook.com/oliver.ricarpo",
+      "image": "Prayer Meeting/July13/july13-3.png"
+    },
+    {
+      "id": "3",
+      "name": "Jocelyn Ricarpo",
+      "role": "Deacon",
+      "facebook": "https://www.facebook.com/purokuno.stfrancis",
+      "image": "Prayer Meeting/July6/july6-6.png"
+    },
+    {
+      "id": "4",
+      "name": "Jericko Bernaldo",
+      "role": "Guitarist",
+      "facebook": "https://www.facebook.com/search/top?q=jericko%20bernaldo",
+      "image": "/leaders/pastor1.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Trixie Nacional",
+      "role": "Bassist",
+      "facebook": "https://www.facebook.com/trixie.nacional.5",
+      "image": "/leaders/pastor2.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Vianca Marie Hernandez",
+      "role": "Worship Leader",
+      "facebook": "https://www.facebook.com/profile.php?id=100086021530605",
+      "image": "/leaders/pastor3.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Trixie Mae Solano",
+      "role": "Usherette",
+      "facebook": "https://www.facebook.com/trixiemae.solano.56",
+      "image": "/leaders/pastor4.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Kirlly Pagara",
+      "role": "Worship Leader",
+      "facebook": "https://www.facebook.com/profile.php?id=61586061310680",
+      "image": "/leaders/pastor5.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Ramilyn Engracia",
+      "role": "Announcer",
+      "facebook": "https://www.facebook.com/ramramen.nissin",
+      "image": "/leaders/pastor6.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Ian Dela Cruz",
+      "role": "Keyboardist",
+      "facebook": "https://www.facebook.com/cmlvyannnn",
+      "image": "/leaders/pastor7.jpg"
+    },
+    {
+      "id": "11",
+      "name": "Marvin Adlawan",
+      "role": "Youth Leader",
+      "facebook": "https://www.facebook.com/marvin.adlawan.48109",
+      "image": "/leaders/pastor8.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Reyman Boloso",
+      "role": "Youth Leader",
+      "facebook": "https://www.facebook.com/reyman.ireneaboloso",
+      "image": "/leaders/pastor13.jpg"
+    },
+    {
+      "id": "13",
+      "name": "Reinz Baylon",
+      "role": "Leader",
+      "facebook": "https://www.facebook.com/reinz.baylon",
+      "image": "/leaders/pastor9.jpg"
+    },
+    {
+      "id": "14",
+      "name": "Jeshurun Dy Ricarpo",
+      "role": "Drummer",
+      "facebook": "https://www.facebook.com/profile.php?id=61589678930945",
+      "image": "/leaders/pastor11.jpg"
+    },
+    {
+      "id": "15",
+      "name": "Jedidiah Sy Ricarpo",
+      "role": "Media",
+      "facebook": "https://www.facebook.com/jedidiah.ricarpo",
+      "image": "/leaders/pastor12.jpg"
+    }
+  ],
+  "songs": [],
+  "aboutInfo": [],
+  "verses": [],
+  "giveInfo": [],
+  "siteSettings": [
+    {
+      "id": "set-nav.home",
+      "key": "nav.home",
+      "value": "Home"
+    },
+    {
+      "id": "set-nav.about",
+      "key": "nav.about",
+      "value": "About"
+    },
+    {
+      "id": "set-nav.events",
+      "key": "nav.events",
+      "value": "Events"
+    },
+    {
+      "id": "set-nav.verse",
+      "key": "nav.verse",
+      "value": "Verse"
+    },
+    {
+      "id": "set-nav.prayer",
+      "key": "nav.prayer",
+      "value": "Prayer"
+    },
+    {
+      "id": "set-nav.contact",
+      "key": "nav.contact",
+      "value": "Contact"
+    },
+    {
+      "id": "set-nav.give",
+      "key": "nav.give",
+      "value": "Give"
+    },
+    {
+      "id": "set-brandName1",
+      "key": "brandName1",
+      "value": "Gospel"
+    },
+    {
+      "id": "set-brandName2",
+      "key": "brandName2",
+      "value": "Fellowship"
+    },
+    {
+      "id": "set-brandName3",
+      "key": "brandName3",
+      "value": "Church"
+    },
+    {
+      "id": "set-heroHeading1",
+      "key": "heroHeading1",
+      "value": "Your home in faith,"
+    },
+    {
+      "id": "set-heroHeading2",
+      "key": "heroHeading2",
+      "value": "hope and love."
+    },
+    {
+      "id": "set-heroCtaVisit",
+      "key": "heroCtaVisit",
+      "value": "Plan a Visit"
+    },
+    {
+      "id": "set-heroCtaEvents",
+      "key": "heroCtaEvents",
+      "value": "Upcoming Events"
+    },
+    {
+      "id": "set-heroServiceButton",
+      "key": "heroServiceButton",
+      "value": "Service"
+    },
+    {
+      "id": "set-heroServiceTimesLabel",
+      "key": "heroServiceTimesLabel",
+      "value": "Service Times"
+    },
+    {
+      "id": "set-heroDirections",
+      "key": "heroDirections",
+      "value": "Get Directions"
+    },
+    {
+      "id": "set-heroCountdownBadge",
+      "key": "heroCountdownBadge",
+      "value": "Sunday · 8:30 AM"
+    },
+    {
+      "id": "set-heroCountdownDays",
+      "key": "heroCountdownDays",
+      "value": "Days"
+    },
+    {
+      "id": "set-heroCountdownHours",
+      "key": "heroCountdownHours",
+      "value": "Hours"
+    },
+    {
+      "id": "set-heroCountdownMins",
+      "key": "heroCountdownMins",
+      "value": "Mins"
+    },
+    {
+      "id": "set-heroCountdownSecs",
+      "key": "heroCountdownSecs",
+      "value": "Secs"
+    },
+    {
+      "id": "set-heroImage",
+      "key": "heroImage",
+      "value": "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=2000&q=80"
+    },
+    {
+      "id": "set-schedule.0.name",
+      "key": "schedule.0.name",
+      "value": "Sunday Worship"
+    },
+    {
+      "id": "set-schedule.0.time",
+      "key": "schedule.0.time",
+      "value": "8:30 AM"
+    },
+    {
+      "id": "set-schedule.0.day",
+      "key": "schedule.0.day",
+      "value": "Sunday"
+    },
+    {
+      "id": "set-schedule.1.name",
+      "key": "schedule.1.name",
+      "value": "Prayer Meeting"
+    },
+    {
+      "id": "set-schedule.1.time",
+      "key": "schedule.1.time",
+      "value": "7:00 PM"
+    },
+    {
+      "id": "set-schedule.1.day",
+      "key": "schedule.1.day",
+      "value": "Monday"
+    },
+    {
+      "id": "set-schedule.2.name",
+      "key": "schedule.2.name",
+      "value": "Worship Night"
+    },
+    {
+      "id": "set-schedule.2.time",
+      "key": "schedule.2.time",
+      "value": "7:00 PM"
+    },
+    {
+      "id": "set-schedule.2.day",
+      "key": "schedule.2.day",
+      "value": "Friday"
+    },
+    {
+      "id": "set-schedule.3.name",
+      "key": "schedule.3.name",
+      "value": "Next Gen Youth"
+    },
+    {
+      "id": "set-schedule.3.time",
+      "key": "schedule.3.time",
+      "value": "7:00 PM"
+    },
+    {
+      "id": "set-schedule.3.day",
+      "key": "schedule.3.day",
+      "value": "Sunday"
+    },
+    {
+      "id": "set-home.tile1.title",
+      "key": "home.tile1.title",
+      "value": "Who We Are"
+    },
+    {
+      "id": "set-home.tile1.text",
+      "key": "home.tile1.text",
+      "value": "Our mission, vision, ministries and leaders."
+    },
+    {
+      "id": "set-home.tile1.cta",
+      "key": "home.tile1.cta",
+      "value": "About GFC"
+    },
+    {
+      "id": "set-home.tile2.title",
+      "key": "home.tile2.title",
+      "value": "Events & Schedule"
+    },
+    {
+      "id": "set-home.tile2.text",
+      "key": "home.tile2.text",
+      "value": "Weekly services and photo albums from gatherings."
+    },
+    {
+      "id": "set-home.tile2.cta",
+      "key": "home.tile2.cta",
+      "value": "See Events"
+    },
+    {
+      "id": "set-home.tile3.title",
+      "key": "home.tile3.title",
+      "value": "Verse of the Day"
+    },
+    {
+      "id": "set-home.tile3.text",
+      "key": "home.tile3.text",
+      "value": "A daily word from the Lord to keep close."
+    },
+    {
+      "id": "set-home.tile3.cta",
+      "key": "home.tile3.cta",
+      "value": "Read Today"
+    },
+    {
+      "id": "set-home.tile4.title",
+      "key": "home.tile4.title",
+      "value": "Prayer Requests"
+    },
+    {
+      "id": "set-home.tile4.text",
+      "key": "home.tile4.text",
+      "value": "Share a request with our prayer team."
+    },
+    {
+      "id": "set-home.tile4.cta",
+      "key": "home.tile4.cta",
+      "value": "Pray With Us"
+    },
+    {
+      "id": "set-home.verseLabel",
+      "key": "home.verseLabel",
+      "value": "Verse of the Day"
+    },
+    {
+      "id": "set-home.verseCta",
+      "key": "home.verseCta",
+      "value": "Read More from the Word"
+    },
+    {
+      "id": "set-home.eventsLabel",
+      "key": "home.eventsLabel",
+      "value": "Gatherings"
+    },
+    {
+      "id": "set-home.eventsHeading",
+      "key": "home.eventsHeading",
+      "value": "Upcoming events"
+    },
+    {
+      "id": "set-home.eventsCta",
+      "key": "home.eventsCta",
+      "value": "View All Events"
+    },
+    {
+      "id": "set-home.eventsEmpty",
+      "key": "home.eventsEmpty",
+      "value": "No upcoming events yet. Check back soon."
+    },
+    {
+      "id": "set-home.eventSeeMore",
+      "key": "home.eventSeeMore",
+      "value": "See more"
+    },
+    {
+      "id": "set-home.annLabel",
+      "key": "home.annLabel",
+      "value": "Announcements"
+    },
+    {
+      "id": "set-home.annHeading",
+      "key": "home.annHeading",
+      "value": "What's new at GFC"
+    },
+    {
+      "id": "set-home.annCategory",
+      "key": "home.annCategory",
+      "value": "Announcement"
+    },
+    {
+      "id": "set-home.annPinned",
+      "key": "home.annPinned",
+      "value": "· Pinned"
+    },
+    {
+      "id": "set-home.prayerLabel",
+      "key": "home.prayerLabel",
+      "value": "We're praying with you"
+    },
+    {
+      "id": "set-prayerTitle1",
+      "key": "prayerTitle1",
+      "value": "Facing a burden?"
+    },
+    {
+      "id": "set-prayerTitle2",
+      "key": "prayerTitle2",
+      "value": "Tell us."
+    },
+    {
+      "id": "set-prayerText",
+      "key": "prayerText",
+      "value": "Share a prayer request with our church family. No request is too small or too big for the Lord."
+    },
+    {
+      "id": "set-home.prayerCta",
+      "key": "home.prayerCta",
+      "value": "Submit a Prayer Request"
+    },
+    {
+      "id": "set-home.visitHeading",
+      "key": "home.visitHeading",
+      "value": "Where to find us"
+    },
+    {
+      "id": "set-visitAddress",
+      "key": "visitAddress",
+      "value": "008 National Road SF. 2 Purok 1, Limay, Bataan. Come as you are — we can't wait to meet you."
+    },
+    {
+      "id": "set-home.visitCta",
+      "key": "home.visitCta",
+      "value": "Get Directions & Register"
+    },
+    {
+      "id": "set-home.giveHeading",
+      "key": "home.giveHeading",
+      "value": "Bless the church"
+    },
+    {
+      "id": "set-giveBlurb",
+      "key": "giveBlurb",
+      "value": "Your tithes and offerings help us continue sharing the Gospel in Limay and beyond."
+    },
+    {
+      "id": "set-home.giveCta",
+      "key": "home.giveCta",
+      "value": "Give Tithes & Offering"
+    },
+    {
+      "id": "set-aboutHeading1",
+      "key": "aboutHeading1",
+      "value": "Rooted in the Word, formed by worship,"
+    },
+    {
+      "id": "set-aboutHeading2",
+      "key": "aboutHeading2",
+      "value": "sent in love."
+    },
+    {
+      "id": "set-aboutEyebrow",
+      "key": "aboutEyebrow",
+      "value": "About GFC"
+    },
+    {
+      "id": "set-aboutMissionTitle",
+      "key": "aboutMissionTitle",
+      "value": "Our Mission & Vision"
+    },
+    {
+      "id": "set-aboutMissionLabel",
+      "key": "aboutMissionLabel",
+      "value": "Mission"
+    },
+    {
+      "id": "set-aboutMissionText",
+      "key": "aboutMissionText",
+      "value": "To proclaim the unqualified gospel of Jesus Christ, making disciples who love God and love one another, and serving our community with the grace we have received."
+    },
+    {
+      "id": "set-aboutVisionLabel",
+      "key": "aboutVisionLabel",
+      "value": "Vision"
+    },
+    {
+      "id": "set-aboutVisionText",
+      "key": "aboutVisionText",
+      "value": "A church rooted in the Word, worshipping freely, and reaching the lost with the love of Christ — locally in Limay and Bataan, and beyond."
+    },
+    {
+      "id": "set-aboutMinistriesTitle",
+      "key": "aboutMinistriesTitle",
+      "value": "Ministries & Community"
+    },
+    {
+      "id": "set-aboutMinistriesCta",
+      "key": "aboutMinistriesCta",
+      "value": "Explore Our Ministries"
+    },
+    {
+      "id": "set-aboutMinistryFocus",
+      "key": "aboutMinistryFocus",
+      "value": "Ministry Focus"
+    },
+    {
+      "id": "set-aboutLeadershipTitle",
+      "key": "aboutLeadershipTitle",
+      "value": "Our pastors & leaders"
+    },
+    {
+      "id": "set-aboutOverseer",
+      "key": "aboutOverseer",
+      "value": "Overseer"
+    },
+    {
+      "id": "set-aboutWhereLabel",
+      "key": "aboutWhereLabel",
+      "value": "Where"
+    },
+    {
+      "id": "set-aboutMeetsLabel",
+      "key": "aboutMeetsLabel",
+      "value": "Meets"
+    },
+    {
+      "id": "set-aboutWorshipLineup",
+      "key": "aboutWorshipLineup",
+      "value": "Worship Lineup"
+    },
+    {
+      "id": "set-aboutFindPlace",
+      "key": "aboutFindPlace",
+      "value": "Find your place to serve"
+    },
+    {
+      "id": "set-aboutPageTitle",
+      "key": "aboutPageTitle",
+      "value": "A church family"
+    },
+    {
+      "id": "set-aboutPageTitle2",
+      "key": "aboutPageTitle2",
+      "value": "for everyone."
+    },
+    {
+      "id": "set-aboutPageSubtitle",
+      "key": "aboutPageSubtitle",
+      "value": "Get to know who we are, what we believe, and how you can find your place to belong."
+    },
+    {
+      "id": "set-aboutLocation",
+      "key": "aboutLocation",
+      "value": "Limay, Bataan."
+    },
+    {
+      "id": "set-aboutCommunity",
+      "key": "aboutCommunity",
+      "value": "Community"
+    },
+    {
+      "id": "set-aboutMinistry",
+      "key": "aboutMinistry",
+      "value": "Ministry"
+    },
+    {
+      "id": "set-aboutLeadership",
+      "key": "aboutLeadership",
+      "value": "Leadership"
+    },
+    {
+      "id": "set-eventsHeroEyebrow",
+      "key": "eventsHeroEyebrow",
+      "value": "Events & Gatherings"
+    },
+    {
+      "id": "set-eventsHeroTitle1",
+      "key": "eventsHeroTitle1",
+      "value": "Worship, prayer,"
+    },
+    {
+      "id": "set-eventsHeroTitle2",
+      "key": "eventsHeroTitle2",
+      "value": "& community."
+    },
+    {
+      "id": "set-eventsHeroSubtitle",
+      "key": "eventsHeroSubtitle",
+      "value": "From Sunday celebration to midweek prayer meetings — there's always a place for you."
+    },
+    {
+      "id": "set-eventsSectionHeading",
+      "key": "eventsSectionHeading",
+      "value": "Church events & schedule"
+    },
+    {
+      "id": "set-eventsEmpty",
+      "key": "eventsEmpty",
+      "value": "No events yet. Check back soon for upcoming gatherings and activities."
+    },
+    {
+      "id": "set-eventsEmptyAlbums",
+      "key": "eventsEmptyAlbums",
+      "value": "No photo albums yet for this event."
+    },
+    {
+      "id": "set-eventsEmptyPhotos",
+      "key": "eventsEmptyPhotos",
+      "value": "No photos uploaded yet for this date."
+    },
+    {
+      "id": "set-commonBack",
+      "key": "commonBack",
+      "value": "Back"
+    },
+    {
+      "id": "set-commonClose",
+      "key": "commonClose",
+      "value": "Close"
+    },
+    {
+      "id": "set-commonDetails",
+      "key": "commonDetails",
+      "value": "Details"
+    },
+    {
+      "id": "set-contactHeroEyebrow",
+      "key": "contactHeroEyebrow",
+      "value": "Contact & Location"
+    },
+    {
+      "id": "set-contactHeroTitle1",
+      "key": "contactHeroTitle1",
+      "value": "We'd love to"
+    },
+    {
+      "id": "set-contactHeroTitle2",
+      "key": "contactHeroTitle2",
+      "value": "welcome you."
+    },
+    {
+      "id": "set-contactHeroSubtitle",
+      "key": "contactHeroSubtitle",
+      "value": "Reach out, get directions, or register your family for the next Sunday service."
+    },
+    {
+      "id": "set-contactChurchInfo",
+      "key": "contactChurchInfo",
+      "value": "Church Information"
+    },
+    {
+      "id": "set-contactVisitHeading",
+      "key": "contactVisitHeading",
+      "value": "Visit Us in Limay, Bataan"
+    },
+    {
+      "id": "set-contactPhoneLabel",
+      "key": "contactPhoneLabel",
+      "value": "Contact No."
+    },
+    {
+      "id": "set-contactPhone",
+      "key": "contactPhone",
+      "value": "123-456-7890 / 0912-345-6789"
+    },
+    {
+      "id": "set-contactEmail",
+      "key": "contactEmail",
+      "value": "gospelfellowshipchurch0923@gmail.com"
+    },
+    {
+      "id": "set-contactFacebookLabel",
+      "key": "contactFacebookLabel",
+      "value": "Official Facebook Page"
+    },
+    {
+      "id": "set-contactFacebookName",
+      "key": "contactFacebookName",
+      "value": "Gospel Fellowship Church Facebook"
+    },
+    {
+      "id": "set-contactRegTitle",
+      "key": "contactRegTitle",
+      "value": "Sunday Service Registration"
+    },
+    {
+      "id": "set-contactRegTitle2",
+      "key": "contactRegTitle2",
+      "value": "Register Your Attendance"
+    },
+    {
+      "id": "set-contactRegText",
+      "key": "contactRegText",
+      "value": "Register your name and family for the upcoming Sunday service."
+    },
+    {
+      "id": "set-contactRegName",
+      "key": "contactRegName",
+      "value": "Full Name *"
+    },
+    {
+      "id": "set-contactRegAge",
+      "key": "contactRegAge",
+      "value": "Age"
+    },
+    {
+      "id": "set-contactRegPhone",
+      "key": "contactRegPhone",
+      "value": "Contact No."
+    },
+    {
+      "id": "set-contactRegFacebook",
+      "key": "contactRegFacebook",
+      "value": "Facebook Account Name (Optional)"
+    },
+    {
+      "id": "set-contactRegSubmit",
+      "key": "contactRegSubmit",
+      "value": "Confirm Attendance"
+    },
+    {
+      "id": "set-contactRegSuccess",
+      "key": "contactRegSuccess",
+      "value": "Thank You for Registering!"
+    },
+    {
+      "id": "set-contactRegAnother",
+      "key": "contactRegAnother",
+      "value": "Register Another"
+    },
+    {
+      "id": "set-prayerHeroEyebrow",
+      "key": "prayerHeroEyebrow",
+      "value": "Prayer Request"
+    },
+    {
+      "id": "set-prayerHeroTitle1",
+      "key": "prayerHeroTitle1",
+      "value": "Cast your cares on"
+    },
+    {
+      "id": "set-prayerHeroTitle2",
+      "key": "prayerHeroTitle2",
+      "value": "Him."
+    },
+    {
+      "id": "set-prayerHeroSubtitle",
+      "key": "prayerHeroSubtitle",
+      "value": "Our prayer team is ready to pray with you. No request is too small or too big for our Lord."
+    },
+    {
+      "id": "set-prayerWallHeading",
+      "key": "prayerWallHeading",
+      "value": "Community Prayer Wall"
+    },
+    {
+      "id": "set-prayerFormHeading",
+      "key": "prayerFormHeading",
+      "value": "Do You Have a Prayer Request?"
+    },
+    {
+      "id": "set-prayerFormName",
+      "key": "prayerFormName",
+      "value": "Name (Optional)"
+    },
+    {
+      "id": "set-prayerFormContact",
+      "key": "prayerFormContact",
+      "value": "Contact No. / Facebook (Optional)"
+    },
+    {
+      "id": "set-prayerFormCategory",
+      "key": "prayerFormCategory",
+      "value": "Select Prayer Category"
+    },
+    {
+      "id": "set-prayerFormMessage",
+      "key": "prayerFormMessage",
+      "value": "Write Your Prayer Request Here *"
+    },
+    {
+      "id": "set-prayerFormSafe",
+      "key": "prayerFormSafe",
+      "value": "Safe & Easy to Use:"
+    },
+    {
+      "id": "set-prayerFormSubmit",
+      "key": "prayerFormSubmit",
+      "value": "Submit Prayer Request"
+    },
+    {
+      "id": "set-prayerFormSuccess",
+      "key": "prayerFormSuccess",
+      "value": "Your Prayer Request Has Been Recorded!"
+    },
+    {
+      "id": "set-prayerFormAnother",
+      "key": "prayerFormAnother",
+      "value": "Submit Another Prayer"
+    },
+    {
+      "id": "set-prayerEmpty",
+      "key": "prayerEmpty",
+      "value": "No prayer requests yet. Be the first to lift one up."
+    },
+    {
+      "id": "set-prayerWallText",
+      "key": "prayerWallText",
+      "value": "Let us also pray for the requests of our brothers and sisters in faith."
+    },
+    {
+      "id": "set-verseHeroEyebrow",
+      "key": "verseHeroEyebrow",
+      "value": "Daily Devotion"
+    },
+    {
+      "id": "set-verseHeroTitle1",
+      "key": "verseHeroTitle1",
+      "value": "The Word for"
+    },
+    {
+      "id": "set-verseHeroTitle2",
+      "key": "verseHeroTitle2",
+      "value": "today."
+    },
+    {
+      "id": "set-verseHeroSubtitle",
+      "key": "verseHeroSubtitle",
+      "value": "A daily reminder of God's faithfulness — a verse to reflect on, memorize, and share."
+    },
+    {
+      "id": "set-verseHeading",
+      "key": "verseHeading",
+      "value": "Verse of the Day"
+    },
+    {
+      "id": "set-verseMore",
+      "key": "verseMore",
+      "value": "More from the Word"
+    },
+    {
+      "id": "set-verseTagline",
+      "key": "verseTagline",
+      "value": "Reflect · Memorize · Share"
+    },
+    {
+      "id": "set-verseCopy",
+      "key": "verseCopy",
+      "value": "Copy Verse"
+    },
+    {
+      "id": "set-verseCopied",
+      "key": "verseCopied",
+      "value": "Copied!"
+    },
+    {
+      "id": "set-giveTitle",
+      "key": "giveTitle",
+      "value": "Give Your Tithes & Offering"
+    },
+    {
+      "id": "set-giveGcashLabel",
+      "key": "giveGcashLabel",
+      "value": "GCash Account"
+    },
+    {
+      "id": "set-giveBankLabel",
+      "key": "giveBankLabel",
+      "value": "Bank Transfer / BDO"
+    },
+    {
+      "id": "set-footerNavTitle",
+      "key": "footerNavTitle",
+      "value": "Navigation"
+    },
+    {
+      "id": "set-footerScheduleTitle",
+      "key": "footerScheduleTitle",
+      "value": "Worship With Us"
+    },
+    {
+      "id": "set-footerContactTitle",
+      "key": "footerContactTitle",
+      "value": "Contact"
+    },
+    {
+      "id": "set-footerAddress",
+      "key": "footerAddress",
+      "value": "008 National Road SF. 2 Purok 1, Limay, Bataan"
+    },
+    {
+      "id": "set-footerBlurb",
+      "key": "footerBlurb",
+      "value": "A family of faith in Limay, Bataan — rooted in the Word, formed by worship, and sent in love."
+    },
+    {
+      "id": "set-footerPhone",
+      "key": "footerPhone",
+      "value": "123-456-7890 / 0912-345-6789"
+    },
+    {
+      "id": "set-footerEmail",
+      "key": "footerEmail",
+      "value": "gospelfellowshipchurch0923@gmail.com"
+    },
+    {
+      "id": "set-footerFacebook",
+      "key": "footerFacebook",
+      "value": "Facebook Page"
+    },
+    {
+      "id": "set-footerCopyright",
+      "key": "footerCopyright",
+      "value": "Gospel Fellowship Church Limay, Bataan. All Rights Reserved."
+    },
+    {
+      "id": "set-footerSeniors",
+      "key": "footerSeniors",
+      "value": "Seniors & Mobile Data Friendly"
+    },
+    {
+      "id": "set-footerBackToTop",
+      "key": "footerBackToTop",
+      "value": "Back to top"
+    },
+    {
+      "id": "set-footerNavHome",
+      "key": "footerNavHome",
+      "value": "Home"
+    },
+    {
+      "id": "set-footerNavAbout",
+      "key": "footerNavAbout",
+      "value": "About Us"
+    },
+    {
+      "id": "set-footerNavEvents",
+      "key": "footerNavEvents",
+      "value": "Events & Schedule"
+    },
+    {
+      "id": "set-footerNavVerse",
+      "key": "footerNavVerse",
+      "value": "Verse of the Day"
+    },
+    {
+      "id": "set-footerNavPrayer",
+      "key": "footerNavPrayer",
+      "value": "Prayer Request"
+    },
+    {
+      "id": "set-footerNavContact",
+      "key": "footerNavContact",
+      "value": "Contact & Location"
+    }
+  ]
+}

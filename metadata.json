@@ -1,0 +1,6 @@
+{
+  "name": "GFC Admin & Church Management System",
+  "description": "Production-ready GFC Admin Dashboard connected to Gospel Fellowship Church (GFC) for managing events, all photos, QR code ticketing & verification, members, and announcements.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
